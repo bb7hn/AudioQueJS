@@ -29,7 +29,7 @@ const audioQue = async (que,reversed=false,sourceUrl='/')=>{
             lastSong.addEventListener("ended", async() => {
                 lastSong = await play(music,false,sourceUrl);
                 que.pop();
-                audioQue(que,true);
+                audioQue(que,true,sourceUrl);
             });
         }
         else{
