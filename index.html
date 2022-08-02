@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AudioQueJS Example Page</title>
-    <script type="module" src="js/audioQue.js"></script>
+    
 </head>
 <body>
     <h1>AudioQueJS</h1>
@@ -21,13 +21,13 @@
     <script type="module">
         import {play,audioQue} from './js/audioQue.js';
         document.getElementById('audio1').addEventListener('click',e=>{
-            play('exampleSounds/1.mp3');
+            play('exampleSounds/1.mp3',false,'./');
         });
         document.getElementById('audio2').addEventListener('click',e=>{
-            play('exampleSounds/2.mp3');
+            play('exampleSounds/2.mp3',false,'./');
         });
         document.getElementById('audio3').addEventListener('click',e=>{
-            play('exampleSounds/3.mp3');
+            play('exampleSounds/3.mp3',false,'./');
         });
 
         const myQue = [
@@ -36,7 +36,7 @@
             "exampleSounds/3.mp3"
         ];
         document.getElementById('playQue').addEventListener('click',e=>{
-            audioQue(myQue);
+            audioQue(myQue,false,'./');
         });
     </script>
 </body>
