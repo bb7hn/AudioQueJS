@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudioQueJS Example Page</title>
+    <script type="module" src="js/audioQue.js"></script>
+</head>
+<body>
+    <h1>AudioQueJS</h1>
+    <p>I created this module because I read some blog posts about <b>why you can't create an audio que (playlist) with JS</b>. Then I wanted to try 😊.</p>
+    <p>So..., here I am, presenting you the "audioQueJS"</p>
+    <p>Before pressing play buttons make sure your device sound is lower enough😊.</p>
+    
+    <button id="audio1">Play 1'st audio</button>
+    <button id="audio2">Play 2'nd audio</button>
+    <button id="audio3">Play 3'rd audio</button>
+    <button id="playQue">Play Que</button>
+    
+    <script type="module">
+        import {play,audioQue} from '/js/audioQue.js';
+        document.getElementById('audio1').addEventListener('click',e=>{
+            play('exampleSounds/1.mp3');
+        });
+        document.getElementById('audio2').addEventListener('click',e=>{
+            play('exampleSounds/2.mp3');
+        });
+        document.getElementById('audio3').addEventListener('click',e=>{
+            play('exampleSounds/3.mp3');
+        });
+
+        const myQue = [
+            "exampleSounds/1.mp3",
+            "exampleSounds/2.mp3",
+            "exampleSounds/3.mp3"
+        ];
+        document.getElementById('playQue').addEventListener('click',e=>{
+            audioQue(myQue);
+        });
+    </script>
+</body>
+</html>
