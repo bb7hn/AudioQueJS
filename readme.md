@@ -16,3 +16,4 @@ Soooo... , here I am with audioQueueJS
 |**sourceUrl** (*string*)| full path of the website which contains audio files. e.g. 'https://batuhanozen.com' (default is *'/'*)|false|
 ### [Demo](https://bb7hn.github.io/audioQueueJS/)
 #### Author and Contributor : [Batuhan ÖZEN](https://batuhanozen.com)
+#### [LICENSE](https://github.com/bb7hn/audioQueueJS/blob/main/LICENSE)
