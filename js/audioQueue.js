@@ -35,7 +35,7 @@ const audioQueue = async (queue,reversed=false,sourceUrl='/')=>{
         else{
             lastSong = await play(music,false,sourceUrl);
             queue.pop();
-            audioQueue(queueue,true,sourceUrl);
+            audioQueue(queue,true,sourceUrl);
         }
     }
     else{
